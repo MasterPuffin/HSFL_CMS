@@ -1,16 +1,16 @@
-uuid: aee40dc7-8a58-44bf-917a-3ad070330617
+uuid: 1be10790-592c-4fe8-9ee6-d238f5568946
 langcode: de
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - node.type.rezept
-    - system.menu.main
+    - system.menu.account
   module:
     - node
     - user
-id: rezepte
-label: Rezepte
+id: startseite
+label: Startseite
 module: views
 description: ''
 tag: ''
@@ -147,21 +147,22 @@ display:
             operator_limit_selection: false
             operator_list: {  }
       sorts:
-        title:
-          id: title
+        created:
+          id: created
           table: node_field_data
-          field: title
-          order: ASC
+          field: created
+          order: DESC
           entity_type: node
-          entity_field: title
-          plugin_id: standard
+          entity_field: created
+          plugin_id: date
           relationship: none
           group_type: group
           admin_label: ''
           exposed: false
           expose:
             label: ''
-      title: Rezepte
+          granularity: second
+      title: Startseite
       header: {  }
       footer: {  }
       empty: {  }
@@ -184,12 +185,11 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: rezepte
+      path: home
       menu:
         type: normal
-        title: Rezepte
-        menu_name: main
-        weight: -48
+        title: Startseite
+        menu_name: account
     cache_metadata:
       max-age: -1
       contexts:

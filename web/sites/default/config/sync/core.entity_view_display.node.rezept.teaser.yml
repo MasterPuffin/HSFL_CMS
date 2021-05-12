@@ -19,24 +19,40 @@ dependencies:
     - field.field.node.rezept.field_zubereitung
     - field.field.node.rezept.field_zubereitungszeit
     - field.field.node.rezept.field_zutaten
+    - image.style.medium
     - node.type.rezept
   module:
+    - image
     - user
 id: node.rezept.teaser
 targetEntityType: node
 bundle: rezept
 mode: teaser
 content:
-  links:
-    weight: 100
+  field_bild:
+    type: image
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings: {  }
+  field_einleitung:
+    type: basic_string
+    weight: 0
+    region: content
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+  links:
+    weight: 2
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_aehnliche: true
-  field_bild: true
   field_bilder_der_zubereitung: true
-  field_einleitung: true
   field_geraete: true
   field_hinweise: true
   field_kategorie: true
