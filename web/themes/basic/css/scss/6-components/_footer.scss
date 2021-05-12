@@ -1,0 +1,26 @@
+.Footer {
+  background-color: $grey;
+  color: $body-color;
+  margin-top:2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  @if ($debug) {
+    outline: 2px dotted sienna;
+  }
+}
+
+.Footer footer {
+  font-size: 0.8em;
+}
+
+.Footer a:link,
+.Footer a:visited {
+  color: $body-color;
+}
+
+
+
+
+@media screen and (min-width: $breakpoint-large) {
+
+}

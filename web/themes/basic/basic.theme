@@ -1,0 +1,148 @@
+<?php
+
+use Drupal\Core\Session\Account;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Theme\ThemeSettings;
+use Drupal\system\Form\ThemeSettingsForm;
+use Drupal\Core\Form;
+
+/*
+ * https://drupal.stackexchange.com/questions/191983/how-do-i-add-custom-theme-settings
+ */
+
+function basic_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormStateInterface $form_state) {
+  $form['basic_settings']['show_regions'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Show regions'),
+    '#default_value' => theme_get_setting('show_regions', 'basic'),
+  );
+}
+
+
+function basic_preprocess_region(&$variables) {
+  $variables['show_regions'] = theme_get_setting('show_regions','basic');
+}
+
+function basic_preprocess_page_title(&$variables) {
+/*
+$node = \Drupal::routeMatch()->getParameter('node');
+  if ($node && $node->getType() == 'projekt') {
+    $variables['hidetitle'] = true;
+  }
+  if ($node && $node->getType() == 'person') {
+    //$variables['title'] = '';
+  }
+  $is_front = \Drupal::service('path.matcher')->isFrontPage();
+  if ($is_front) {
+    $variables['hidetitle'] = true;
+  }
+  // Hide all titles :-{
+  $variables['hidetitle'] = true;
+*/
+}
+
+function basic_preprocess_image_extended_formatter(&$variables) {
+
+}
+
+function basic_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  if ($node->getType() == 'projekt') {
+  }
+}
+
+function basic_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
+  if ($hook == 'views_view') {
+    $suggestions[] = $hook . '__' . $variables['view']->id();
+    $suggestions[] = $hook . '__' . $variables['view']->id() . '__' . $variables['view']->current_display;
+  }
+  if ($hook == 'views_view_unformatted') {
+    //var_dump($variables['view']->id());
+    //var_dump($variables['view']->current_display);
+    $suggestions[] = $hook . '__' . $variables['view']->id();
+    $suggestions[] = $hook . '__' . $variables['view']->id() . '__' . $variables['view']->current_display;
+  }
+}
+
+
+// Thanks @mortendk
+// https://github.com/mortendk/vanilla/blob/develop/vanilla.theme
+//@TODO: Doc.
+function basic_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+
+  // creates template suggestions
+  // field--[bundle]--field--[type]--[viewmode]
+  // examples:
+  // field--user--field--image--compact.html.twig
+  // field--user--field--image.html.twig
+  $element = $variables['element'];
+
+  $suggestions[] = 'field__' . $element['#field_type'] . '__' . $element['#view_mode'];
+  $suggestions[] = 'field__' . $element['#field_name'] . '__' . $element['#view_mode'];;
+  $suggestions[] = 'field__' . $element['#bundle'] . '__field__' . $element['#field_type'];
+  $suggestions[] = 'field__' . $element['#bundle'] . '__field__' . $element['#field_type'] . '__' . $element['#view_mode'];
+
+  // Special for viewfield
+  if ($variables['element']['#bundle'] == 'views' && $variables['element']['#field_type'] == 'viewfield') {
+    $vname = $variables['element']['#object']->get($element['#field_name'])->vname;
+    $vname = str_replace('|', '_', $vname);
+    $suggestions[] = 'field__' . $element['#field_name'] . '__' . $vname;
+  }
+}
+
+
+function basic_theme_suggestions_taxonomy_term_alter(array &$suggestions, array $variables) {
+
+  // creates template suggestions
+
+  $element = $variables['elements'];
+  $term = $element['#taxonomy_term'];
+  $vid = $term->getVocabularyId();
+
+  $suggestions[] = 'taxonomy_term__' . $element['#view_mode'];
+  $suggestions[] = 'taxonomy_term__' . $vid;
+  $suggestions[] = 'taxonomy_term__' . $vid . '__' . $element['#view_mode'];
+}
+
+// Thanks @mortendk
+// https://github.com/mortendk/vanilla/blob/develop/vanilla.theme
+function basic_theme_suggestions_container_alter(array &$suggestions, array $variables) {
+  // provide a container__[name] template suggestion for containers
+  // we use this to remove the front container ex (look in /templates/_cleanup)
+  // as well as wrappers on thegoddamn forms
+
+  // this is for form wrappers
+  if (isset($variables['element']['#id'])) {
+    $suggestions[] = 'container__' . $variables['element']['#id'];
+  }
+
+  //test if this fucker is always used on forms
+  if (isset($variables['element']['widget']['#theme'])) {
+    $suggestions[] = 'form_container';
+  }
+
+  // ex container or actions on forms
+  if (isset($variables['element']['#type'])) {
+    $suggestions[] = 'container__' . $variables['element']['#type'];
+  }
+
+  // frontpage content wrapper & others - we used this to remove that wrapper on
+  //frontpage and overwrites with /_cleanup/container/frontpage.html.twig
+  if (isset($variables['element']['#name'])) {
+    $suggestions[] = 'container__' . $variables['element']['#name'];
+  }
+}
+
+// Thanks @mortendk
+// https://github.com/mortendk/vanilla/blob/develop/vanilla.theme
+function basic_page_attachments_alter(array &$page) {
+  $viewport = [
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => [
+      'name' => 'viewport',
+      'content' => 'width=device-width, initial-scale=1',
+    ],
+  ];
+  $page['#attached']['html_head'][] = [$viewport, 'viewport'];
+}

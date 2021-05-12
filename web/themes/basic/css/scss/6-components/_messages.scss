@@ -1,0 +1,55 @@
+/**
+ * Styles for system messages.
+ */
+.messages {
+  background: no-repeat 10px 17px;  /* LTR */
+  border: 1px solid;
+  border-width: 1px;
+  border-radius: 4px;
+  padding: 15px 20px 15px 35px; /* LTR */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin-bottom: 1em;
+  box-shadow: none;
+}
+
+.messages + .messages {
+  margin-top: 1.538em;
+}
+.messages__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.messages__item + .messages__item {
+  margin-top: 0.769em;
+}
+
+/* See .color-success in Seven's colors.css */
+.messages--status {
+  color: #325e1c;
+  background-color: #f3faef;
+  border-color: #c9e1bd;  /* LTR */
+  background-image: url(icons/73b355/check.svg);
+}
+
+
+/* See .color-warning in Seven's colors.css */
+.messages--warning {
+  background-color: #fdf8ed;
+  background-image: url(icons/e29700/warning.svg);
+  border-color: #f4daa6;  /* LTR */
+  color: #734c00;
+}
+
+/* See .color-error in Seven's colors.css */
+.messages--error {
+  background-color: #fcf4f2;
+  color: #a51b00;
+  background-image: url(icons/ea2800/error.svg);
+  border-color: #f9c9bf;  /* LTR */
+}
+
+.messages--error p.error {
+  color: #a51b00;
+}

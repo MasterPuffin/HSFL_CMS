@@ -1,0 +1,16 @@
+.item-list > ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.item-list > ul > li {
+  display: inline-block;
+  margin-bottom: 0.3em;
+}
+.item-list > ul > li a {
+  background-color: $hs-dunkelrosa;
+  color: $white;
+  border-radius: 1em;
+  padding: 0.2em 0.6em;
+}

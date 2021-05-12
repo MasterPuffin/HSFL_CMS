@@ -1,0 +1,10 @@
+.search-block-form {
+  margin-bottom: 1em;
+}
+
+.search-block-form h2 {
+  @include visually-hidden;
+}
+.search-block-form form {
+  display:flex;
+}

@@ -1,0 +1,19 @@
+name: 'Basic'
+type: theme
+description: 'A very basic theme for content modelling'
+version: VERSION
+core: 8.x
+core_version_requirement: ^8 || ^9
+base theme: stable
+
+libraries:
+  - basic/style
+
+regions:
+  header: Header
+  navigation: Navigation
+  messages: Messages
+  content: Content
+  footer: Footer
+
+features: []

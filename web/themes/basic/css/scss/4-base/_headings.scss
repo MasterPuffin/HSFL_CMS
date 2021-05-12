@@ -1,0 +1,45 @@
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    font-family: $heading-font;
+}
+
+h1, .h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+    color: $hs-rosa;
+}
+
+h2, .h2 {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 0em;
+    color: $hs-orange;
+}
+
+h3, .h3 {
+    font-size: 1.2em;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $hs-dunkelrosa;
+
+}
+
+h4, .h4 {
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $hs-dunkelblau;
+
+}
+
+h5, .h5 {
+    font-size: 1em;
+    font-weight: italic;
+    margin-top: 0;
+    margin-bottom: 0;
+}

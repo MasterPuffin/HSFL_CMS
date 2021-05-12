@@ -1,0 +1,18 @@
+.Region {
+  outline: 1px dotted red;
+  margin:0 0.5em 0.5em 0;
+  padding:0.5em;
+}
+
+.Region-name {
+  background-color: red;
+  color: white;
+  display:inline-block;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+
+  position: relative;
+  top: -0.5em;
+  left: -0.5em;
+
+}

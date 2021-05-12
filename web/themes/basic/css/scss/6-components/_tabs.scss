@@ -1,0 +1,71 @@
+/* --------------- System Tabs  --------------- */
+
+.tabs ul {
+  margin-bottom: 1em;
+}
+
+.tabs ul li a {
+  color: #000;
+  background-color: #ededed;
+  border-color: #bbb;
+  border-style: solid solid solid solid;
+  border-width: 1px;
+  height: 1.8em;
+  line-height: 1.9;
+  display: block;
+  font-size: 0.929em;
+  padding: 0 10px 3px;
+  margin: 0;
+  text-shadow: 0 1px 0 #fff;
+  text-decoration:none;
+}
+.tabs ul .is-active {
+  background-color: $body-color ;
+  border-bottom: 1px solid $body-color ;
+}
+@media screen and (max-width: 37.5em) { /* 600px */
+  .tabs ul {
+    border-bottom: 1px solid #bbb;
+  }
+  .tabs ul li {
+    display: block;
+    margin: 0;
+  }
+  .tabs ul li a {
+    padding: 5px 10px;
+  }
+  .tabs ul li.is-active a {
+    border-bottom: none;
+  }
+}
+@media screen and (min-width: 37.5em) { /* 600px */
+  .tabs ul {
+    border-collapse: collapse;
+    height: auto;
+    line-height: normal;
+    padding: 0 3px;
+
+    overflow: hidden;
+    border: none;
+    background: transparent url(images/tabs-border.png) repeat-x left bottom;
+    white-space: nowrap;
+  }
+  .tabs ul li {
+    display: block;
+    float: left; /* LTR */
+    vertical-align: bottom;
+    margin: 0 5px 0 0; /* LTR */
+  }
+  [dir="rtl"] .tabs ul.primary li {
+    margin: 0 0 0 5px;
+    float: right;
+  }
+  .tabs ul li a {
+    float: left; /* not LTR */
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+  .tabs ul li.is-active a {
+    border-bottom: 1px solid #fff;
+  }
+}

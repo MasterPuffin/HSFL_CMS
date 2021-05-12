@@ -1,0 +1,22 @@
+// Colors
+
+$hs-dunkelblau : #483b89;  // 11.2
+$hs-helllila : rgb(107 , 62 , 145);   // 7.7
+$hs-dunkelrosa : rgb(163 , 84 , 148); // 4.9
+$hs-rosa : rgb(211 , 83 , 120); // 4.0
+$hs-orange : #eb6909; //3.2
+$hs-rot : #e2001a;
+$hs-hellblau : #a2daf3; // 1.5
+
+$primary: $hs-dunkelblau;
+
+$link-color: $hs-dunkelrosa;
+$link-color-hover: lighten($link-color,20);
+
+$nav-main-color: $hs-dunkelblau;
+
+$text-color: #555;
+
+$grey: #aaa;
+$white: #fff;
+$body-color: $white;

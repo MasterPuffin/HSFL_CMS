@@ -1,0 +1,92 @@
+// Inspired by Zurb Foundation 6
+nav {
+    // To deal with "contextual-areas"
+    font-family: $nav-font;
+    @if ($debug) {
+        outline: 1px solid blue;
+    }
+}
+
+.menu {
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+    font-size: 0.9em;
+    position: relative;
+    clear: both;
+}
+
+.menu>li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.menu>li>a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.menu--toplevel {
+    font-weight: normal;
+    background-color: transparent;
+    color: $nav-main-color;
+    font-size: 0.9em;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+}
+
+.menu--toplevel>li {
+    padding-left: 0.5em;
+    width: auto;
+    display: inline-block;
+}
+.menu--toplevel>li:first-child {
+    padding-left: 0;
+}
+
+.menu--toplevel>li>a:link,
+.menu--toplevel>li>a:visited {
+    color: $nav-main-color;
+}
+
+
+
+.menu--toplevel>.menu-item--active>a:link,
+.menu--toplevel>.menu-item--active>a:visited {
+    color: $nav-main-color;
+}
+
+.menu--toplevel>li>a:hover,
+.menu--toplevel>.menu-item--active>a:hover {
+    color: $white;
+}
+
+.menu--nested > li {
+    display: block;
+}
+
+
+
+@media screen and (min-width:$breakpoint-small-nav) {
+    .menu--toplevel {
+        font-size:1em;
+    }
+    .menu--toplevel>li {
+        width: auto;
+        display: inline-block;
+    }
+
+}
+
+
+
+
+@media screen and (min-width:$breakpoint-large) {
+    .menu--toplevel {
+        font-size: 1.1em;
+
+    }
+}

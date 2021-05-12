@@ -1,0 +1,80 @@
+.user-login-form .form-item-name > label,
+.user-login-form .form-item-pass > label,
+.user-register-form .form-item-name > label,
+.user-register-form .form-item-mail > label,
+.user-register-form .form-item-pass-pass1 > label,
+.user-register-form .form-item-pass-pass2 > label,
+.user-pass .form-item-name > label,
+.user-pass .form-item-mail > label {
+  display: block;
+  margin-top:1em;
+
+}
+
+.user-login-form .description,
+.user-register-form .description,
+.user-pass p {
+  color: #999;
+}
+
+.user-login-form .form-item-name > input,
+.user-login-form .form-item-pass > input,
+.user-register-form .form-item-name > input,
+.user-register-form .form-item-mail > input,
+.user-register-form .form-item-pass-pass1 > input,
+.user-register-form .form-item-pass-pass2 > input,
+.user-pass .form-item-name > input,
+.user-pass .form-item-mail > input {
+  display: inline-block;
+  width:16em;
+  font-size:1.5em;
+  padding:0.2em;
+}
+
+.password-strength {
+  width: 16em;
+}
+
+
+.user-login-form .form-actions  > input,
+.user-register-form .form-actions  > input,
+.user-pass .form-actions  > input{
+  width:16em;
+  font-size:1.5em;
+  padding:0.2em;
+}
+
+.user-login-form .form-actions  > input[type='submit'],
+.user-register-form .form-actions  > input[type='submit'],
+.user-pass .form-actions  > input[type='submit'] {
+  margin-top:1em;
+  cursor: pointer;
+  padding: 1px 8px;
+  margin-bottom: 1em;
+  text-align: center;
+  font-weight: normal;
+  border: 1px solid darken($primary,10);
+  background: $primary;
+  color: $white;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+
+.user-login-form .form-actions  > input[type='submit']:hover,
+.user-register-form .form-actions  > input[type='submit']:hover,
+.user-pass .form-actions  > input[type='submit']:hover {
+  border: 1px solid darken($primary,10);
+  background: $primary;
+  color: $white;
+}
+
+.user-login-form .form-actions  > input[type='submit']:active,
+.user-register-form .form-actions  > input[type='submit']:active,
+.user-register-form .form-actions  > input[type='submit']:active {
+  border: 1px solid darken($primary,10);
+  background: $primary;
+  color: $white;
+}
+

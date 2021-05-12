@@ -1,0 +1,72 @@
+//
+// Breakpoints
+//
+$breakpoint-xsmall:                             18em;
+$breakpoint-small:                              30em;
+$breakpoint-small-nav:                          36em;
+$breakpoint-medium:                             42em;
+$breakpoint-large:                              54em;
+$breakpoint-xlarge:                             64em;
+$breakpoint-xxlarge:                            90em;
+$breakpoint-xxxlarge:                           120em;
+
+$breakpoint-max:                               142em;
+
+$breakpoint-debug: false !default;
+
+@if ($breakpoint-debug){
+
+  @media screen and (min-width: $breakpoint-xsmall) {
+    body {border-top:3px solid grey;}
+    body:before {
+      content:'xsmall';
+      position:absolute;
+      z-index:10000;
+      color:grey;
+      left:0;
+      top:0;
+    }
+  }
+  @media screen and (min-width: $breakpoint-small) {
+    body {border-top:3px solid blue;}
+    body:before {
+      content:'small';
+    }
+  }
+  @media screen and (min-width: $breakpoint-small-nav) {
+    body {border-top:3px solid lightseagreen;}
+    body:before {
+      content:'small-nav';
+    }
+  }
+  @media screen and (min-width: $breakpoint-medium) {
+    body {border-top:3px solid lightskyblue;}
+    body:before {
+      content:'small-medium';
+    }
+  }
+  @media screen and (min-width: $breakpoint-large) {
+    body {border-top:3px solid saddlebrown;}
+    body:before {
+      content:'large';
+    }
+  }
+  @media screen and (min-width: $breakpoint-xlarge) {
+    body {border-top:3px solid salmon;}
+    body:before {
+      content:'xlarge';
+    }
+  }
+  @media screen and (min-width: $breakpoint-xxlarge) {
+    body {border-top:3px solid teal;}
+    body:before {
+      content:'xxlarge';
+    }
+  }
+  @media screen and (min-width: $breakpoint-xxxlarge) {
+    body {border-top:3px solid aquamarine;}
+    body:before {
+      content:'xxxlarge';
+    }
+  }
+}
