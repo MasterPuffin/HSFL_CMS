@@ -1,19 +1,18 @@
-uuid: 881e2eac-6533-4882-8759-ec924093f745
+uuid: 2a857a6a-f5b7-4f3c-8362-90e2cec891bc
 langcode: de
 status: true
 dependencies:
   module:
     - node
-    - taxonomy
-id: node.field_tags
-field_name: field_tags
+id: node.field_einleitung
+field_name: field_einleitung
 entity_type: node
-type: entity_reference
+type: string_long
 settings:
-  target_type: taxonomy_term
+  case_sensitive: false
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

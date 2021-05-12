@@ -1,0 +1,19 @@
+uuid: daea8183-e2ee-4f81-a7b2-6ba57d0378b6
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_zubereitungszeit
+    - node.type.rezept
+id: node.rezept.field_zubereitungszeit
+field_name: field_zubereitungszeit
+entity_type: node
+bundle: rezept
+label: Zubereitungszeit
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

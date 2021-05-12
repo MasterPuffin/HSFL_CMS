@@ -1,21 +1,19 @@
-uuid: aff52153-ceeb-4613-85e2-1e6bedf5aa44
+uuid: 995e9b68-fc3a-4c70-95f4-6a46e3d4ef76
 langcode: de
 status: true
 dependencies:
   config:
     - field.storage.node.field_tags
-    - node.type.article
+    - node.type.rezept
     - taxonomy.vocabulary.tags
-_core:
-  default_config_hash: QdUgf_beeoaPiyKorFv0q1fcJpWH_uZTqe_xoVJacrw
-id: node.article.field_tags
+id: node.rezept.field_tags
 field_name: field_tags
 entity_type: node
-bundle: article
+bundle: rezept
 label: Tags
-description: 'Geben Sie eine kommagetrennte Liste an, z.B.: Amsterdam, Mexico City, "Berlin, Hamburg"'
+description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -24,6 +22,8 @@ settings:
     target_bundles:
       tags: tags
     sort:
-      field: _none
-    auto_create: true
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
 field_type: entity_reference

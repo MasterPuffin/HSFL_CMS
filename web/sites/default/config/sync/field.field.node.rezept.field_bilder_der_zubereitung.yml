@@ -1,0 +1,38 @@
+uuid: e8a549b4-6c0e-4c86-bede-1e1bf05109f3
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bilder_der_zubereitung
+    - node.type.rezept
+  module:
+    - image
+id: node.rezept.field_bilder_der_zubereitung
+field_name: field_bilder_der_zubereitung
+entity_type: node
+bundle: rezept
+label: 'Bilder der Zubereitung'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: 'png gif jpg jpeg'
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  max_resolution: ''
+  min_resolution: ''
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  max_filesize: ''
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

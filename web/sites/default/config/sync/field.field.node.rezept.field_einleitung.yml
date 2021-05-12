@@ -1,0 +1,19 @@
+uuid: 59db54d0-5dd8-4f49-a071-d37ea4e24b86
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_einleitung
+    - node.type.rezept
+id: node.rezept.field_einleitung
+field_name: field_einleitung
+entity_type: node
+bundle: rezept
+label: Einleitung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

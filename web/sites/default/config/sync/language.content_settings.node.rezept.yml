@@ -1,0 +1,11 @@
+uuid: 5adbf54c-3204-4dec-b0fd-1e91238bbe05
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.rezept
+id: node.rezept
+target_entity_type_id: node
+target_bundle: rezept
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,18 @@
+uuid: 3b83244b-dcd2-45da-8c52-81e1909994f2
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Rezept
+type: rezept
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

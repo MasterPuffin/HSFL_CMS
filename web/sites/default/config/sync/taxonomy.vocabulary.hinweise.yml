@@ -1,0 +1,8 @@
+uuid: f9c13e0f-7975-4ea1-9ff8-e45b446d849c
+langcode: de
+status: true
+dependencies: {  }
+name: Hinweise
+vid: hinweise
+description: ''
+weight: 0

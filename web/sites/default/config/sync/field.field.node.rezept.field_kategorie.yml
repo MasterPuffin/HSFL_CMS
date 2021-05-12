@@ -1,0 +1,29 @@
+uuid: 3db71931-52a0-44bb-9e5b-a854d153c13a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_kategorie
+    - node.type.rezept
+    - taxonomy.vocabulary.kategorie
+id: node.rezept.field_kategorie
+field_name: field_kategorie
+entity_type: node
+bundle: rezept
+label: Kategorie
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      kategorie: kategorie
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

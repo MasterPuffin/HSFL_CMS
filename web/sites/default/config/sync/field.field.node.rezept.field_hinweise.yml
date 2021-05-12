@@ -1,0 +1,29 @@
+uuid: a2598848-cc8d-4727-a388-2c8efb1929c8
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hinweise
+    - node.type.rezept
+    - taxonomy.vocabulary.hinweise
+id: node.rezept.field_hinweise
+field_name: field_hinweise
+entity_type: node
+bundle: rezept
+label: Hinweise
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      hinweise: hinweise
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

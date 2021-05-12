@@ -1,0 +1,29 @@
+uuid: 078cd413-ee0e-4717-b840-fff1eafdb9dd
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_schwierigkeitsgrad
+    - node.type.rezept
+    - taxonomy.vocabulary.schwierigkeitsgrad
+id: node.rezept.field_schwierigkeitsgrad
+field_name: field_schwierigkeitsgrad
+entity_type: node
+bundle: rezept
+label: Schwierigkeitsgrad
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      schwierigkeitsgrad: schwierigkeitsgrad
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: d036eacb-d0dc-4199-a5a3-3dac6fdf679b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_geraete
+    - node.type.rezept
+  module:
+    - text
+id: node.rezept.field_geraete
+field_name: field_geraete
+entity_type: node
+bundle: rezept
+label: Geräte
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

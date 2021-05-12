@@ -1,0 +1,8 @@
+uuid: ad46c8b4-f13e-40e2-aa5a-35163a315d07
+langcode: de
+status: true
+dependencies: {  }
+name: Schwierigkeitsgrad
+vid: schwierigkeitsgrad
+description: ''
+weight: 0

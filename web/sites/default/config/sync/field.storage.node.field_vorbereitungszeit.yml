@@ -1,19 +1,20 @@
-uuid: 881e2eac-6533-4882-8759-ec924093f745
+uuid: 3f8bc58e-6413-4f0a-bd8b-2fcc25441d3d
 langcode: de
 status: true
 dependencies:
   module:
     - node
-    - taxonomy
-id: node.field_tags
-field_name: field_tags
+id: node.field_vorbereitungszeit
+field_name: field_vorbereitungszeit
 entity_type: node
-type: entity_reference
+type: string
 settings:
-  target_type: taxonomy_term
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

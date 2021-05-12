@@ -1,19 +1,19 @@
-uuid: 881e2eac-6533-4882-8759-ec924093f745
+uuid: 68a2e514-7eae-4950-9570-7b4931bc361f
 langcode: de
 status: true
 dependencies:
   module:
     - node
-    - taxonomy
-id: node.field_tags
-field_name: field_tags
+id: node.field_personen
+field_name: field_personen
 entity_type: node
-type: entity_reference
+type: integer
 settings:
-  target_type: taxonomy_term
+  unsigned: false
+  size: normal
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

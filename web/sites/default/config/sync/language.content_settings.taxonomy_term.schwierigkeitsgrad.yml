@@ -1,0 +1,11 @@
+uuid: 8611b773-4dba-4c6e-b54e-c2d8c422a531
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.schwierigkeitsgrad
+id: taxonomy_term.schwierigkeitsgrad
+target_entity_type_id: taxonomy_term
+target_bundle: schwierigkeitsgrad
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,21 @@
+uuid: f08cf434-2c15-4647-afe8-cbd8340a5bc0
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_zubereitung
+    - node.type.rezept
+  module:
+    - text
+id: node.rezept.field_zubereitung
+field_name: field_zubereitung
+entity_type: node
+bundle: rezept
+label: Zubereitung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

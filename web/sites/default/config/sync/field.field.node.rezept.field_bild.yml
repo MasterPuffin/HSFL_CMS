@@ -1,40 +1,38 @@
-uuid: de0febfc-aafc-4a99-b447-ee5bd8e5682e
+uuid: 0c7d134c-8ba9-4100-942d-cf70c9ab0dd2
 langcode: de
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
-    - node.type.article
+    - field.storage.node.field_bild
+    - node.type.rezept
   module:
     - image
-_core:
-  default_config_hash: tgJzhA7Swh4M_gWU5FwFe5lPxPj5rebpMbvhpdNrERs
-id: node.article.field_image
-field_name: field_image
+id: node.rezept.field_bild
+field_name: field_bild
 entity_type: node
-bundle: article
+bundle: rezept
 label: Bild
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
-  max_filesize: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
   max_resolution: ''
   min_resolution: ''
-  alt_field: true
-  title_field: false
-  alt_field_required: true
-  title_field_required: false
   default_image:
     uuid: null
     alt: ''
     title: ''
     width: null
     height: null
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  max_filesize: ''
   handler: 'default:file'
   handler_settings: {  }
 field_type: image

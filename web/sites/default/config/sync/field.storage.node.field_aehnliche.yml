@@ -1,16 +1,15 @@
-uuid: 881e2eac-6533-4882-8759-ec924093f745
+uuid: b1ab7aa3-ee2f-48d9-aaae-89930d039112
 langcode: de
 status: true
 dependencies:
   module:
     - node
-    - taxonomy
-id: node.field_tags
-field_name: field_tags
+id: node.field_aehnliche
+field_name: field_aehnliche
 entity_type: node
 type: entity_reference
 settings:
-  target_type: taxonomy_term
+  target_type: node
 module: core
 locked: false
 cardinality: -1

@@ -1,0 +1,23 @@
+uuid: 37357fa4-56a8-44dd-a30a-35bfbb41c9a8
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_personen
+    - node.type.rezept
+id: node.rezept.field_personen
+field_name: field_personen
+entity_type: node
+bundle: rezept
+label: Personen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

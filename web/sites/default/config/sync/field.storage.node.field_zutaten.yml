@@ -1,0 +1,19 @@
+uuid: b1502a81-0c69-454b-8b7b-e8d032b2bc78
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_zutaten
+field_name: field_zutaten
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

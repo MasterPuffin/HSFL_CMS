@@ -1,0 +1,51 @@
+uuid: 5ba5a8ad-9900-4592-9c4a-756a3585214b
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.rezept.field_aehnliche
+    - field.field.node.rezept.field_bild
+    - field.field.node.rezept.field_bilder_der_zubereitung
+    - field.field.node.rezept.field_einleitung
+    - field.field.node.rezept.field_geraete
+    - field.field.node.rezept.field_hinweise
+    - field.field.node.rezept.field_kategorie
+    - field.field.node.rezept.field_personen
+    - field.field.node.rezept.field_schwierigkeitsgrad
+    - field.field.node.rezept.field_tags
+    - field.field.node.rezept.field_vorbereitungszeit
+    - field.field.node.rezept.field_wartezeit
+    - field.field.node.rezept.field_zubereitung
+    - field.field.node.rezept.field_zubereitungszeit
+    - field.field.node.rezept.field_zutaten
+    - node.type.rezept
+  module:
+    - user
+id: node.rezept.teaser
+targetEntityType: node
+bundle: rezept
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_aehnliche: true
+  field_bild: true
+  field_bilder_der_zubereitung: true
+  field_einleitung: true
+  field_geraete: true
+  field_hinweise: true
+  field_kategorie: true
+  field_personen: true
+  field_schwierigkeitsgrad: true
+  field_tags: true
+  field_vorbereitungszeit: true
+  field_wartezeit: true
+  field_zubereitung: true
+  field_zubereitungszeit: true
+  field_zutaten: true
+  langcode: true

@@ -1,0 +1,21 @@
+uuid: 20978720-34f1-4783-b57c-7a16a17b9992
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_zutaten
+    - node.type.rezept
+  module:
+    - text
+id: node.rezept.field_zutaten
+field_name: field_zutaten
+entity_type: node
+bundle: rezept
+label: Zutaten
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
