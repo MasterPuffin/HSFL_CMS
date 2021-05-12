@@ -40,6 +40,7 @@ module:
   text: 0
   toolbar: 0
   tour: 0
+  twig_debugger: 0
   update: 0
   user: 0
   views_ui: 0
@@ -50,6 +51,8 @@ theme:
   seven: 0
   stable: 0
   basic: 0
+  stable9: 0
+  bljo6035: 0
 profile: standard
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

@@ -1,0 +1,22 @@
+uuid: 981ba176-5b1e-4389-82ec-abee19e2d42a
+langcode: de
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - bljo6035
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: bljo6035_help
+theme: bljo6035
+region: content
+weight: -6
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Hilfe
+  provider: help
+  label_display: '0'
+visibility: {  }

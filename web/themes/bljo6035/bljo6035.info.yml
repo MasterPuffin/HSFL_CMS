@@ -1,0 +1,15 @@
+name: Mein Base-Theme
+type: theme
+description: 'Mein Basis-Theme für die Rezeptsite'
+core_version_requirement: ^9
+libraries:
+  - bljo6035/base-styling
+  - bljo6035/boxes
+base theme: stable9
+regions:
+  header: Header
+  navigation: Navigation
+  mood: Mood
+  messages: Messages
+  content: Content
+  footer: Footer

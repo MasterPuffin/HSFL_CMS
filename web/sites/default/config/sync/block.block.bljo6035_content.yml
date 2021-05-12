@@ -1,0 +1,22 @@
+uuid: 6a333f95-e0a1-4c61-9c7c-2bdc47f67467
+langcode: de
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bljo6035
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: bljo6035_content
+theme: bljo6035
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: Haupt-Seiteninhalt
+  provider: system
+  label_display: '0'
+visibility: {  }

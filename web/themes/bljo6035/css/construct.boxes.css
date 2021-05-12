@@ -1,0 +1,251 @@
+/**
+ * Modified from https://github.com/t7/construct.css/
+
+ MIT License
+
+Copyright (c) 2018 TandemSeven
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+ */
+
+:root {
+	--spacing: 4px;
+}
+/*
+"Box" level elements.
+==================================================
+*/
+
+.u-boxes address,
+.u-boxes article,
+.u-boxes aside,
+.u-boxes div,
+.u-boxes dd,
+.u-boxes dl,
+.u-boxes dt,
+.u-boxes figure,
+.u-boxes figcaption,
+.u-boxes footer,
+.u-boxes form,
+.u-boxes header,
+.u-boxes hgroup,
+.u-boxes main,
+.u-boxes nav,
+.u-boxes output,
+.u-boxes section {
+	border: 1px dashed #f0f;
+	display: block;
+	position: relative;
+
+	padding: var(--spacing);
+	margin-bottom: var(--spacing);
+	margin-top: 1em;
+}
+
+.u-boxes article,
+.u-boxes aside,
+.u-boxes figure,
+.u-boxes footer,
+.u-boxes form,
+.u-boxes header,
+.u-boxes hgroup,
+.u-boxes main,
+.u-boxes nav,
+.u-boxes section {
+	border: 2px dashed #080;
+	padding: calc(var(--spacing) * 2);
+}
+
+.u-boxes address > :last-child,
+.u-boxes article > :last-child,
+.u-boxes aside > :last-child,
+.u-boxes div > :last-child,
+.u-boxes dd > :last-child,
+.u-boxes dl > :last-child,
+.u-boxes dt > :last-child,
+.u-boxes figure > :last-child,
+.u-boxes figcaption > :last-child,
+.u-boxes footer > :last-child,
+.u-boxes form > :last-child,
+.u-boxes header > :last-child,
+.u-boxes hgroup > :last-child,
+.u-boxes main > :last-child,
+.u-boxes nav > :last-child,
+.u-boxes output > :last-child,
+.u-boxes section > :last-child {
+	margin-bottom: 0;
+}
+
+.u-boxes address::before,
+.u-boxes article::before,
+.u-boxes aside::before,
+.u-boxes div::before,
+.u-boxes dd::before,
+.u-boxes dl::before,
+.u-boxes dt::before,
+.u-boxes figure::before,
+.u-boxes figcaption::before,
+.u-boxes footer::before,
+.u-boxes form::before,
+.u-boxes header::before,
+.u-boxes hgroup::before,
+.u-boxes main::before,
+.u-boxes nav::before,
+.u-boxes output::before,
+.u-boxes section::before {
+	background: #fff;
+	color: #f0f;
+	font-family: "Courier", monospace;
+	font-size: 0.666rem;
+	letter-spacing: 0.1rem;
+	line-height: 1.3;
+	text-transform: uppercase;
+	position: absolute;
+	top: 0;
+	left: 0.3rem;
+}
+
+/*
+==============
+BOXES: BEFORE.
+==============
+*/
+
+.u-boxes address::before {
+	content: "address";
+}
+
+.u-boxes article::before {
+	content: "article";
+}
+
+.u-boxes aside::before {
+	content: "aside";
+}
+
+.u-boxes div::before {
+	content: "div";
+}
+
+.u-boxes dd::before {
+	content: "dd";
+}
+
+.u-boxes dl::before {
+	content: "dl";
+}
+
+.u-boxes dt::before {
+	content: "dt";
+}
+
+.u-boxes figure::before {
+	content: "figure";
+}
+
+.u-boxes figcaption::before {
+	content: "figcaption";
+}
+
+.u-boxes footer::before {
+	content: "footer";
+}
+
+.u-boxes form::before {
+	content: "form";
+}
+
+.u-boxes header::before {
+	content: "header";
+}
+
+.u-boxes hgroup::before {
+	content: "hgroup";
+}
+
+.u-boxes main::before {
+	content: "main";
+}
+
+.u-boxes nav::before {
+	content: "nav";
+}
+
+.u-boxes output::before {
+	content: "output";
+}
+
+.u-boxes section::before {
+	content: "section";
+}
+
+/*
+Div-itis.
+==================================================
+*/
+
+.u-boxes div > div:not([role]):not(:empty):not(.contextual):not(.contextual-region):only-child {
+	box-shadow: none;
+	border: 0;
+	padding: 0;
+}
+
+.u-boxes div > div:not([role]):not(:empty):not(.contextual):not(.contextual-region):only-child::before {
+	--offset: calc(-1 * var(--spacing));
+
+	margin-top: var(--offset);
+	margin-left: var(--offset);
+	content: "div-itis";
+}
+
+/*
+Figure.
+==================================================
+*/
+
+.u-boxes img {
+	max-width: 100%;
+	height: auto;
+}
+.u-boxes figure img {
+	margin-bottom: var(--spacing);
+}
+
+/*
+Drupal specific
+ */
+
+.u-boxes .contextual-region,
+.u-boxes .contextual {
+	border-color: #a87ea8;
+	border-style: dotted;
+}
+
+.u-boxes .contextual-region::before {
+	content: "div (Contextual Region)";
+	color: #a08da0;
+	font-size: 0.3rem;
+}
+
+.u-boxes .contextual::before {
+	content: "div (Contextual)";
+	color: #a08da0;
+	font-size: 0.3rem;
+}

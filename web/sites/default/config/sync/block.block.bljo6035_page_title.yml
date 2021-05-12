@@ -1,0 +1,20 @@
+uuid: a0d9d525-f3bb-4802-8fc6-8aed2d0a24f8
+langcode: de
+status: true
+dependencies:
+  theme:
+    - bljo6035
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: bljo6035_page_title
+theme: bljo6035
+region: content
+weight: -3
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: Seitentitel
+  provider: core
+  label_display: '0'
+visibility: {  }

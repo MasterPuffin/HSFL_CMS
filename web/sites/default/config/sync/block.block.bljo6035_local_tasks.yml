@@ -1,0 +1,22 @@
+uuid: e0842e27-dca4-4072-aa10-b9a8d4a16289
+langcode: de
+status: true
+dependencies:
+  theme:
+    - bljo6035
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: bljo6035_local_tasks
+theme: bljo6035
+region: content
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Reiter
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }
