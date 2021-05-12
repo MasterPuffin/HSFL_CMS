@@ -11,7 +11,7 @@ dependencies:
 id: bljo6035_kontaktdaten
 theme: bljo6035
 region: footer
-weight: 0
+weight: -5
 provider: null
 plugin: 'block_content:18cbf302-8fac-496d-ad08-3c283aa6749a'
 settings:

@@ -11,8 +11,8 @@ dependencies:
     - bljo6035
 id: bljo6035_views_block__tags_block_1
 theme: bljo6035
-region: content
-weight: 0
+region: footer
+weight: -7
 provider: null
 plugin: 'views_block:tags-block_1'
 settings:
