@@ -1,0 +1,29 @@
+uuid: 29ea5de8-dd84-4f79-931a-0059b82aec8b
+langcode: de
+status: true
+dependencies:
+  config:
+    - views.view.tags
+  module:
+    - system
+    - views
+  theme:
+    - bljo6035_site
+id: bljo6035_site_views_block__tags_block_1
+theme: bljo6035_site
+region: footer
+weight: -7
+provider: null
+plugin: 'views_block:tags-block_1'
+settings:
+  id: 'views_block:tags-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/rezepte\r\n/rezepte/*"
+    negate: false

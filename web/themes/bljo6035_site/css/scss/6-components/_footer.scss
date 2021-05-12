@@ -1,0 +1,29 @@
+.Footer {
+    background: #3f1004;
+    color: $white;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    margin-top: 2em;
+}
+
+.Footer a:link,
+.Footer a:visited {
+    color: white;
+}
+
+@supports(display:grid) {
+    @media screen and (min-width: 30em) {
+        .Footer .l-Container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1em;
+        }
+    }
+    @media screen and (min-width: 45em) {
+        .Footer footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1em;
+        }
+    }
+}

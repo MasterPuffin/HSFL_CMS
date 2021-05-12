@@ -1,0 +1,17 @@
+.Cardlist {}
+
+.Cardlist>* {
+    float: left;
+    width: 30em;
+}
+
+@supports (display:grid) {
+    .Cardlist {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+        grid-gap: 1em;
+    }
+    .Cardlist * {
+        width: auto;
+    }
+}

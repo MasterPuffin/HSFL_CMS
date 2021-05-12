@@ -1,0 +1,80 @@
+// Inspired by Zurb Foundation 6
+nav {
+    // To deal with "contextual-areas"
+    font-family: $nav-font;
+    @if ($debug) {
+        outline: 1px solid blue;
+    }
+}
+
+.menu {
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+    position: relative;
+    clear: both;
+}
+
+.menu>li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.menu>li>a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.menu--toplevel {
+    font-weight: normal;
+    background-color: transparent;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.menu--toplevel>li {
+    width: auto;
+    display: block;
+    margin-bottom: 0.5em;
+    margin-right: 2em;
+}
+
+@media screen and (min-width: 30em) {
+    .menu--toplevel>li {
+        display: inline-block;
+    }
+}
+
+.menu--toplevel>li>a:link,
+.menu--toplevel>li>a:visited {
+    color: $text-color;
+}
+
+.menu--toplevel>.menu-item--active>a:link,
+.menu--toplevel>.menu-item--active>a:visited {
+    color: $primary;
+}
+
+.menu--toplevel>li>a:hover,
+.menu--toplevel>.menu-item--active>a:hover {
+    color: $white;
+}
+
+#block-hauptnavigation .menu--toplevel {
+    font-weight: normal;
+}
+
+.menu--footer {}
+
+.menu--footer>li {
+    display: block;
+    font-family: $text-font;
+}
+
+.menu--utility {
+    font-family: $text-font;
+    font-size: 0.8em;
+}

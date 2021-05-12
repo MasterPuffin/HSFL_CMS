@@ -1,0 +1,22 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font-family: $text-font;
+    line-height: 1.5em;
+    background-color: $body-color;
+    margin: 0;
+}
+
+hr {
+    margin: 3em 0;
+}
+
+header {
+    padding-top: 2em;
+    background-image: url("../images/marta-markes-541705-unsplash.jpg");
+    background-size: cover;
+    background-position: center center;
+}

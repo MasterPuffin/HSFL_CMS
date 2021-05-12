@@ -1,0 +1,25 @@
+uuid: 3cba02c3-f8fd-42c1-af75-b41902895476
+langcode: de
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bljo6035_site
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: bljo6035_site_branding
+theme: bljo6035_site
+region: header
+weight: -8
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Branding der Website'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

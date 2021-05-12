@@ -1,0 +1,22 @@
+uuid: 6942a8e8-6025-4675-adaf-ad76cc134700
+langcode: de
+status: true
+dependencies:
+  theme:
+    - bljo6035_site
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: bljo6035_site_local_tasks
+theme: bljo6035_site
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Reiter
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

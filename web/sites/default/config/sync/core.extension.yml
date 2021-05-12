@@ -53,6 +53,7 @@ theme:
   basic: 0
   stable9: 0
   bljo6035: 0
+  bljo6035_site: 0
 profile: standard
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

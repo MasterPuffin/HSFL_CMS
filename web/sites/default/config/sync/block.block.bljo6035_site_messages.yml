@@ -1,0 +1,22 @@
+uuid: 61ff5636-5018-49e6-8d26-0f365dacc78d
+langcode: de
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bljo6035_site
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: bljo6035_site_messages
+theme: bljo6035_site
+region: messages
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Status-Nachrichten
+  provider: system
+  label_display: '0'
+visibility: {  }

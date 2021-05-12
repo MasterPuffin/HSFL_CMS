@@ -1,0 +1,29 @@
+.Breadcrumb {
+    max-width: 60em;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.Breadcrumb ol {
+    list-style-type: none;
+}
+
+.Breadcrumb ol>li {
+    display: inline-block;
+}
+
+.Breadcrumb ol>li:after {
+    content: " » ";
+    font-size: 1.3em;
+}
+
+.Breadcrumb ol>li:last-of-type:after {
+    content: "";
+}
+
+.Breadcrumb a {
+    text-decoration: none;
+}

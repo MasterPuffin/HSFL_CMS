@@ -1,0 +1,25 @@
+uuid: be8992a2-7ba6-46c2-85f6-925bee5b5791
+langcode: de
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:18cbf302-8fac-496d-ad08-3c283aa6749a'
+  module:
+    - block_content
+  theme:
+    - bljo6035_site
+id: bljo6035_site_kontaktdaten
+theme: bljo6035_site
+region: footer
+weight: -5
+provider: null
+plugin: 'block_content:18cbf302-8fac-496d-ad08-3c283aa6749a'
+settings:
+  id: 'block_content:18cbf302-8fac-496d-ad08-3c283aa6749a'
+  label: Kontaktdaten
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

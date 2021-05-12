@@ -1,0 +1,22 @@
+uuid: fbb894be-4b6e-44f6-a109-d2c59e72557a
+langcode: de
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - bljo6035_site
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: bljo6035_site_powered
+theme: bljo6035_site
+region: footer
+weight: -4
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Angetrieben durch Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

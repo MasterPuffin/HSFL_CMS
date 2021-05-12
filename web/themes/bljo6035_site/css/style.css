@@ -1,0 +1,643 @@
+@charset "UTF-8";
+/**
+ * Inspired by ITCSS from csswizardry.
+ * http://csswizardry.net/talks/2014/11/itcss-dafed.pdf
+ */
+/**
+ *
+ */
+@font-face {
+  font-family: OpenSans;
+  font-weight: normal;
+  font-style: normal;
+  src: url("fonts/Open_Sans/OpenSans-Regular.ttf"); }
+
+@font-face {
+  font-family: OpenSans;
+  font-weight: bold;
+  font-style: normal;
+  src: url("fonts/Open_Sans/OpenSans-Bold.ttf"); }
+
+@font-face {
+  font-family: imfell;
+  font-weight: normal;
+  font-style: italic;
+  src: url("fonts/IM_Fell_English/IMFeENit28P.ttf"); }
+
+@font-face {
+  font-family: imfell;
+  font-weight: normal;
+  font-style: normal;
+  src: url("fonts/IM_Fell_English/IMFeENrm28P.ttf"); }
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: block;
+  overflow: hidden; }
+
+.clearfix:after {
+  clear: both; }
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden; }
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  height: 100%; }
+
+body {
+  height: 100%;
+  font-family: OpenSans, "Helvetica Neue", Helvetica, sans-serif;
+  line-height: 1.5em;
+  background-color: #fbf5ee;
+  margin: 0; }
+
+hr {
+  margin: 3em 0; }
+
+header {
+  padding-top: 2em;
+  background-image: url("../images/marta-markes-541705-unsplash.jpg");
+  background-size: cover;
+  background-position: center center; }
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: imfell, georgia, serif; }
+
+h1,
+.h1 {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 1em;
+  margin-bottom: 2rem;
+  color: #da3c13;
+  line-height: 1; }
+
+h2,
+.h2 {
+  font-size: 3em;
+  font-weight: normal;
+  margin-top: 1em;
+  margin-bottom: 0.66em;
+  padding-top: 0.66em;
+  border-top: 2px dashed #ac206d;
+  font-family: imfell, georgia, serif;
+  font-style: italic;
+  color: #ac206d; }
+
+h3,
+.h3 {
+  font-size: 1.2em;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 0; }
+
+h4,
+.h4 {
+  font-size: 1em;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 0; }
+
+a {
+  text-decoration: underline;
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 2px;
+  color: #da3c13; }
+
+a:link,
+a:visited {
+  color: #da3c13; }
+
+a:hover {
+  background-color: #da3c13;
+  color: #fff; }
+
+a:active {
+  position: relative;
+  top: 1px;
+  left: 1px; }
+
+h1 > a:link,
+h2 > a:link,
+h3 > a:link,
+h4 > a:link {
+  text-decoration: none;
+  color: inherit; }
+
+h1 > a:hover,
+h2 > a:hover,
+h3 > a:hover,
+h4 > a:hover {
+  background-color: #da3c13;
+  color: #fff; }
+
+ul, ol {
+  padding-left: 1.2em; }
+
+p,
+ul,
+ol,
+dl {
+  margin-top: 0;
+  margin-bottom: 0.5em; }
+
+table, th, tr, td {
+  text-align: left;
+  vertical-align: top; }
+
+td, th {
+  padding-right: 2em; }
+
+tr {
+  border-top: 1px solid #aaa; }
+
+/*
+* 1. Responsiveness: Sets a maximum width relative to the parent and auto scales the height
+* 2. Corrects `max-width` behavior if padding and border are used
+* 3. Remove border when inside `a` element in IE 8/9/10.
+* 4. Remove the gap between images and the bottom of their containers
+*/
+img {
+  /* 1 */
+  max-width: 100%;
+  height: auto;
+  /* 2 */
+  box-sizing: border-box;
+  /* 3 */
+  border: 0;
+  /* 4 */
+  vertical-align: middle; }
+
+figure {
+  margin: 0; }
+
+figcaption {
+  font-size: 1em;
+  font-size: 1rem; }
+
+.u-silent:link {
+  text-decoration: none; }
+
+nav {
+  font-family: imfell, georgia, serif; }
+
+.menu {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+  position: relative;
+  clear: both; }
+
+.menu > li {
+  display: inline-block;
+  vertical-align: middle; }
+
+.menu > li > a {
+  display: inline-block;
+  text-decoration: none; }
+
+.menu--toplevel {
+  font-weight: normal;
+  background-color: transparent;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 1.1em;
+  font-weight: bold; }
+
+.menu--toplevel > li {
+  width: auto;
+  display: block;
+  margin-bottom: 0.5em;
+  margin-right: 2em; }
+
+@media screen and (min-width: 30em) {
+  .menu--toplevel > li {
+    display: inline-block; } }
+
+.menu--toplevel > li > a:link,
+.menu--toplevel > li > a:visited {
+  color: #464646; }
+
+.menu--toplevel > .menu-item--active > a:link,
+.menu--toplevel > .menu-item--active > a:visited {
+  color: #da3c13; }
+
+.menu--toplevel > li > a:hover,
+.menu--toplevel > .menu-item--active > a:hover {
+  color: #fff; }
+
+#block-hauptnavigation .menu--toplevel {
+  font-weight: normal; }
+
+.menu--footer > li {
+  display: block;
+  font-family: OpenSans, "Helvetica Neue", Helvetica, sans-serif; }
+
+.menu--utility {
+  font-family: OpenSans, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 0.8em; }
+
+.Cardlist > * {
+  float: left;
+  width: 30em; }
+
+@supports (display: grid) {
+  .Cardlist {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    grid-gap: 1em; }
+  .Cardlist * {
+    width: auto; } }
+
+.l-Container {
+  max-width: 60em;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding-left: 1em;
+  padding-right: 1em; }
+
+.l-Navgroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.l-Navgroup > * {
+  flex-shrink: 0;
+  margin-right: 1em; }
+
+.menu--utility {
+  position: absolute;
+  top: -2.5em;
+  right: 0; }
+
+.Breadcrumb {
+  max-width: 60em;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding-left: 1em;
+  padding-right: 1em; }
+
+.Breadcrumb ol {
+  list-style-type: none; }
+
+.Breadcrumb ol > li {
+  display: inline-block; }
+
+.Breadcrumb ol > li:after {
+  content: " » ";
+  font-size: 1.3em; }
+
+.Breadcrumb ol > li:last-of-type:after {
+  content: ""; }
+
+.Breadcrumb a {
+  text-decoration: none; }
+
+.Intro {
+  text-align: center; }
+
+.Intro h1 {
+  font-size: 3.2em;
+  line-height: 1.2em; }
+
+.Intro p {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: imfell, georgia, serif;
+  font-size: 2em;
+  line-height: 1.2em;
+  font-style: italic;
+  color: #77184c; }
+
+.Search form {
+  display: flex; }
+
+.Search form input {
+  font-size: 1rem;
+  margin-right: 1rem; }
+
+.Search form input[type='submit'] {
+  background-color: #ac206d;
+  color: #fff;
+  font-size: 1rem;
+  border: #ac206d;
+  border-radius: 6px;
+  padding: 0.25em 1em; }
+
+@media screen and (min-width: 30em) {
+  .Search form input {
+    font-size: 1.25rem; }
+  .Search form input[type='submit'] {
+    font-size: 1.25rem;
+    padding: 0.25em 1em; } }
+
+.Mood {
+  background-image: url("images/elli-o-65548-unsplash.jpg");
+  min-height: 8em;
+  height: 45vh;
+  max-height: 15em;
+  background-size: cover;
+  background-position: center center; }
+
+@media screen and (min-width: 30em) {
+  .Mood {
+    min-height: 10em;
+    height: 45vh;
+    max-height: 60em; } }
+
+.Mood .l-Container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  display: flex;
+  align-items: center; }
+
+.Mood--rezept {
+  background-image: none;
+  display: flex; }
+
+.Mood-info--rezept {
+  order: 2;
+  background: #3f1004;
+  flex-basis: 50%;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 1.4em;
+  line-height: 1.2em;
+  margin: 0; }
+
+.Mood-image--rezept {
+  height: 100%;
+  object-fit: cover;
+  flex-basis: 50%;
+  order: 1; }
+
+.Mood-image--rezept img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+@media screen and (min-width: 40em) {
+  .Mood-image--rezept {
+    flex-basis: 50%; }
+  .Mood-info--rezept {
+    flex-basis: 50%;
+    font-size: 2.4em; } }
+
+.Logo {
+  line-height: 1;
+  font-size: 3em;
+  font-family: imfell, georgia, serif;
+  font-style: italic; }
+
+.Logo a {
+  text-decoration: none; }
+
+.Card {
+  background: #fff;
+  max-width: 30em;
+  padding: 0.5em;
+  margin-right: 1em;
+  margin-bottom: 1em; }
+
+@supports (display: grid) {
+  .Card {
+    margin-right: 0;
+    display: grid;
+    grid-template-rows: min-content min-content 1fr; } }
+
+.Card-label {
+  font-family: imfell, georgia, serif;
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 0.5em; }
+
+.Card-image {
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: minmax(1em, 20em);
+  grid-template-rows: minmax(1em, 9em); }
+
+.Card-image img {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center center; }
+
+.Card-image a:hover {
+  background: none; }
+
+.Card-content {
+  margin-top: 0.5em;
+  display: grid;
+  grid-template-rows: 1fr min-content; }
+
+.Card-links {
+  text-align: right;
+  align-self: flex-end; }
+
+.Card-links a:link {
+  text-decoration: none;
+  font-family: imfell, georgia, serif;
+  font-size: 1.1em; }
+
+.Card-links a:after {
+  content: " » ";
+  font-size: 1.5em; }
+
+@supports (display: grid) {
+  @media screen and (min-width: 45em) {
+    .Rezept {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas: "intro intro" "text  info" "geräte  abb" "zubereitung  abb"; } } }
+
+.Rezept-meta {
+  font-size: 0.8em;
+  color: grey;
+  margin-top: 1em;
+  font-style: italic; }
+
+.Rezept-meta-von {
+  font-style: normal; }
+
+@media screen and (min-width: 80em) {
+  .Rezept-meta {
+    text-align: right;
+    width: 10em;
+    position: absolute;
+    left: -12em;
+    top: 6em; }
+  .Rezept-meta span {
+    display: block; } }
+
+.Rezept-intro {
+  font-size: 1.4em;
+  font-family: imfell, georgia, serif;
+  line-height: 1.2;
+  margin: 1em 0em;
+  font-style: italic;
+  color: #ac206d;
+  grid-area: intro; }
+
+@media screen and (min-width: 30em) {
+  .Rezept-intro {
+    font-size: 2em;
+    margin: 2em 2em; } }
+
+.Rezept-text {
+  max-width: 30em;
+  background: repeating-linear-gradient(0deg, white 0px, white 24px, red 25px);
+  background-size: 30em 25px;
+  background-position: 8px 8px;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  grid-area: text; }
+
+.Rezept-text h2 {
+  padding-bottom: 0.2em;
+  border-bottom: 2px dashed #ac206d;
+  border-top: none;
+  font-family: imfell, georgia, serif; }
+
+.Rezept-text--zutaten {
+  grid-area: text; }
+
+.Rezept-text--geräte {
+  background: repeating-linear-gradient(0deg, #ffe9c8 0px, #ffe9c8 24px, red 25px);
+  background-size: 30em 25px;
+  background-position: 8px 8px;
+  grid-area: geräte; }
+
+.Rezept-text--zubereitung {
+  background: repeating-linear-gradient(0deg, #d3f9fa 0px, #d3f9fa 24px, red 25px);
+  background-size: 30em 25px;
+  background-position: 8px 8px;
+  grid-area: zubereitung; }
+
+@media screen and (min-width: 30em) {
+  .Rezept-text {
+    transform: rotate(-3deg); }
+  .Rezept-text--zutaten {
+    transform: rotate(-3deg); }
+  .Rezept-text--geräte {
+    transform: rotate(3deg); }
+  .Rezept-text--zubereitung {
+    transform: rotate(-5deg); } }
+
+.Rezept-abbildungen {
+  grid-area: abb; }
+
+.Rezept-abbildungen img {
+  transform: rotate(4deg);
+  border: 8px solid white;
+  margin-bottom: -1em; }
+
+.Rezept-abbildungen img:nth-child(2n+1) {
+  margin-bottom: 1em;
+  transform: rotate(-5deg); }
+
+.Rezept-infos {
+  transform: rotate(0deg);
+  margin-bottom: 2em; }
+
+@supports (display: grid) {
+  .Rezept-infos {
+    display: grid;
+    grid-template-columns: min-content min-content;
+    grid-row-gap: 0.5em; }
+  .Rezept-infos dt {
+    grid-column: 1;
+    border-top: 1px solid #ac206d; }
+  .Rezept-infos dd {
+    grid-column: 2;
+    border-top: 1px solid #ac206d;
+    margin-left: 0;
+    padding-left: 1em; } }
+
+.Rezept-infos dd > ul {
+  list-style-type: none;
+  padding-left: 0; }
+
+.Taglist {
+  list-style-type: none;
+  padding-left: 0;
+  line-height: 2em; }
+
+.Taglist > li {
+  display: inline-block; }
+
+.Taglist > li > *,
+.Tag {
+  background-color: #ac206d;
+  color: #fff;
+  border-radius: 1em;
+  padding: 0.2em 0.6em; }
+
+.Taglist > li > a,
+.Tag a,
+a.Tag {
+  text-decoration: none; }
+
+.Taglist--footer > li > * {
+  font-size: 0.80em; }
+
+.Footer {
+  background: #3f1004;
+  color: #fff;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  margin-top: 2em; }
+
+.Footer a:link,
+.Footer a:visited {
+  color: white; }
+
+@supports (display: grid) {
+  @media screen and (min-width: 30em) {
+    .Footer .l-Container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1em; } }
+  @media screen and (min-width: 45em) {
+    .Footer footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1em; } } }
+
+/*
+    pesticide v0.1.0 . @mrmrs . MIT
+*/

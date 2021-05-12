@@ -1,0 +1,27 @@
+.Taglist {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 2em;
+}
+
+.Taglist>li {
+    display: inline-block;
+}
+
+.Taglist>li>*,
+.Tag {
+    background-color: rgb(172, 32, 109);
+    color: #fff;
+    border-radius: 1em;
+    padding: 0.2em 0.6em;
+}
+
+.Taglist>li>a,
+.Tag a,
+a.Tag {
+    text-decoration: none;
+}
+
+.Taglist--footer>li>* {
+    font-size: 0.80em;
+}

@@ -1,0 +1,22 @@
+uuid: 24b5e9a7-26dc-4653-a637-9182acebb64d
+langcode: de
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bljo6035_site
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: bljo6035_site_breadcrumbs
+theme: bljo6035_site
+region: content
+weight: -6
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Pfadnavigation
+  provider: system
+  label_display: '0'
+visibility: {  }

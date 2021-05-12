@@ -1,0 +1,14 @@
+name: Mein Theme für die Rezept-Site
+type: theme
+description: 'Mein Theme für die Rezeptsite'
+core_version_requirement: ^9
+libraries:
+  - bljo6035_site/styling
+base theme: bljo6035
+regions:
+  header: Header
+  navigation: Navigation
+  mood: Mood
+  messages: Messages
+  content: Content
+  footer: Footer

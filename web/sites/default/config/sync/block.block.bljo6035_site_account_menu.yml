@@ -1,0 +1,27 @@
+uuid: 82463cd6-2bbc-4715-9bea-61f1c878cf79
+langcode: de
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - bljo6035_site
+_core:
+  default_config_hash: 8a31Ywc1t2zlddGd3bmDrFMefWqgSK2E02ceFdr-bfc
+id: bljo6035_site_account_menu
+theme: bljo6035_site
+region: navigation
+weight: -6
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: Benutzermenü
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

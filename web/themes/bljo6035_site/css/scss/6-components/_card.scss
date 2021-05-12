@@ -1,0 +1,63 @@
+.Card {
+    background: $white;
+    max-width: 30em;
+    padding: 0.5em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+
+@supports (display:grid) {
+    .Card {
+        margin-right: 0;
+        display: grid;
+        grid-template-rows: min-content min-content 1fr;
+    }
+}
+
+.Card-label {
+    font-family: $heading-font;
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.Card-image {
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: minmax(1em, 20em);
+    grid-template-rows: minmax(1em, 9em);
+}
+
+.Card-image img {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.Card-image a:hover {
+    background: none;
+}
+
+.Card-content {
+    margin-top: 0.5em;
+    display: grid;
+    grid-template-rows: 1fr min-content;
+}
+
+.Card-links {
+    text-align: right;
+    align-self: flex-end
+}
+
+.Card-links a:link {
+    text-decoration: none;
+    font-family: $heading-font;
+    font-size: 1.1em;
+}
+
+.Card-links a:after {
+    content: " » ";
+    font-size: 1.5em;
+}

@@ -1,0 +1,40 @@
+//
+// Breakpoints
+//
+$breakpoint-small:                              30em;
+$breakpoint-small-nav:                          36em;
+$breakpoint-medium:                             42em;
+$breakpoint-large:                              60em;
+
+$breakpoint-max:                               80em;
+
+$breakpoint-debug: false !default;
+
+@if ($breakpoint-debug){
+
+
+  @media screen and (min-width: $breakpoint-small) {
+    body {border-top:3px solid blue;}
+    body:before {
+      content:'small';
+    }
+  }
+  @media screen and (min-width: $breakpoint-small-nav) {
+    body {border-top:3px solid lightseagreen;}
+    body:before {
+      content:'small-nav';
+    }
+  }
+  @media screen and (min-width: $breakpoint-medium) {
+    body {border-top:3px solid lightskyblue;}
+    body:before {
+      content:'small-medium';
+    }
+  }
+  @media screen and (min-width: $breakpoint-large) {
+    body {border-top:3px solid saddlebrown;}
+    body:before {
+      content:'large';
+    }
+  }
+}

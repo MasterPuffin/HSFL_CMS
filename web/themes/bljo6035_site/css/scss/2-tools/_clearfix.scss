@@ -1,0 +1,17 @@
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: block;
+  overflow: hidden;
+}
+.clearfix:after {
+  clear: both;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

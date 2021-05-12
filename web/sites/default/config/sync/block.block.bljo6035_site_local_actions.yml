@@ -1,0 +1,20 @@
+uuid: 2914aaca-c3fa-42d6-9900-fffa6a93158b
+langcode: de
+status: true
+dependencies:
+  theme:
+    - bljo6035_site
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: bljo6035_site_local_actions
+theme: bljo6035_site
+region: content
+weight: -7
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primäre Verwaltungsaktionen'
+  provider: core
+  label_display: '0'
+visibility: {  }
