@@ -1,0 +1,29 @@
+uuid: a82c2b68-7f5c-4a87-ac9a-b8a485a03abc
+langcode: de
+status: true
+dependencies:
+  config:
+    - views.view.tags
+  module:
+    - system
+    - views
+  theme:
+    - basic
+id: views_block__tags_block_1
+theme: basic
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:tags-block_1'
+settings:
+  id: 'views_block:tags-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/rezepte\r\n/rezepte/*"
+    negate: false
