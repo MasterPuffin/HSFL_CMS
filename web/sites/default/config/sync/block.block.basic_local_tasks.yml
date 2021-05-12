@@ -1,0 +1,22 @@
+uuid: 37aac781-df0b-45b1-89d1-305c31c60e36
+langcode: de
+status: true
+dependencies:
+  theme:
+    - basic
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: basic_local_tasks
+theme: basic
+region: content
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Reiter
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

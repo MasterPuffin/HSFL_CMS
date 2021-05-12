@@ -1,0 +1,14 @@
+uuid: cf4b86d0-7329-47a1-b669-c8c6f059736d
+name: 'HSFL CMS'
+mail: hsflcms@pxmo.de
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: de
+default_langcode: de
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE

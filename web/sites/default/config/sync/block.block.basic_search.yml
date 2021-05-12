@@ -1,0 +1,23 @@
+uuid: fab6d2ba-8bde-446d-a124-f5c0943b1a9e
+langcode: de
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - basic
+_core:
+  default_config_hash: Q-4EcGAsu26ICu4ejEz0uE1zv4akpiaOsizxgZfAmEw
+id: basic_search
+theme: basic
+region: header
+weight: -6
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Suche
+  provider: search
+  label_display: visible
+  page_id: node_search
+visibility: {  }

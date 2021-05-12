@@ -1,0 +1,14 @@
+uuid: 1d138423-a3ef-4bcc-945a-f5f1876f674c
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: Website-Feedback
+recipients:
+  - hsflcms@pxmo.de
+reply: ''
+weight: 0
+message: 'Ihre Nachricht wurde gesendet.'
+redirect: ''

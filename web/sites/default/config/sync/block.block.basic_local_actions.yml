@@ -1,0 +1,20 @@
+uuid: 91482754-f6f4-4d61-bec4-fc3d8605dc8e
+langcode: de
+status: true
+dependencies:
+  theme:
+    - basic
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: basic_local_actions
+theme: basic
+region: content
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primäre Verwaltungsaktionen'
+  provider: core
+  label_display: '0'
+visibility: {  }
