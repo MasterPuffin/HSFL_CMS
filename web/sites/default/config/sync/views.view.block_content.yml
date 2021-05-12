@@ -1,6 +1,6 @@
 uuid: f5f4eb23-1d72-4440-b05c-76471db45cc9
 langcode: de
-status: true
+status: false
 dependencies:
   module:
     - block_content

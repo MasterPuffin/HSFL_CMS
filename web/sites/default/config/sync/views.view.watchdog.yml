@@ -1,6 +1,6 @@
 uuid: d358f710-4320-43d6-ba36-0cd5c25b3cd7
 langcode: de
-status: true
+status: false
 dependencies:
   module:
     - dblog
