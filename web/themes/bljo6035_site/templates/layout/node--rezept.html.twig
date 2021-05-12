@@ -1,26 +1,66 @@
 <article{{ attributes }}>
-
-  <h1>xxx</h1>
-  {{ title_prefix }}
-  {% if label and not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
-
-  {% if display_submitted %}
+  <div class="Mood Mood--rezept">
+    <h1 class="Mood-info--rezept">
+      <span>{{ label  }}</span>
+    </h1>
+    <div class="Mood-image--rezept">
+      {{ content.field_bild }}
+    </div>
+  </div>
+  <div class="l-Container">
     <footer>
-      {{ author_picture }}
-      <div{{ author_attributes }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
+      <div class="Rezept-meta">
+        <span class="Rezept-meta-von">Von {{ author_name }}</span>
+        <span>{{ date }}</span>
       </div>
     </footer>
-  {% endif %}
 
-  <div{{ content_attributes }}>
-    {{ content }}
+    <div class="Rezept">
+      <p class="Rezept-intro">{{ content.field_einleitung.0 }}</p>
+
+      <div class="Rezept-info">
+        <section>
+
+          <dl class="Rezept-infos">
+            <dt>Art</dt>
+            <dd>{{ content.field_kategorie }}</dd>
+            <dt>Hinweise</dt>
+            <dd>
+              <ul>
+                {{ content.field_hinweise }}
+              </ul>
+            </dd>
+            <dt>Schwierigkeitsgrad</dt>
+            <dd>{{ content.field_schwierigkeitsgrad }}</dd>
+            <dt>Reicht für</dt>
+            <dd>{{ content.field_personen }} Personen</dd>
+            <dt>Vorbereitungszeit</dt>
+            <dd>{{ content.field_vorbereitungszeit }}</dd>
+            <dt>Wartezeit</dt>
+            <dd>{{ content.field_wartezeit }}</dd>
+            <dt>Zubereitungszeit</dt>
+            <dd>{{ content.field_zubereitungszeit }}</dd>
+          </dl>
+          <ul class="Taglist">
+            {{ content.field_tags }}
+          </ul>
+        </section>
+      </div>
+      <div class="Rezept-text Rezept-text--zutaten">
+        <h2>Zutaten</h2>
+        {{ content.field_zutaten }}
+      </div>
+      <div class="Rezept-text Rezept-text--geräte">
+        <h2>Geräte</h2>
+        {{ content.field_geraete }}
+      </div>
+      <div class="Rezept-text Rezept-text--zubereitung">
+        <h2>Zubereitung</h2>
+        {{ content.field_zubereitung }}
+      </div>
+      <div class="Rezept-abbildungen">
+        {{ content.field_bilder_der_zubereitung }}
+      </div>
+    </div>
   </div>
-
 </article>

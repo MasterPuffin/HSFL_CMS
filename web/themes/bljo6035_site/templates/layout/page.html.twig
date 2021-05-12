@@ -43,49 +43,41 @@
  * @see html.html.twig
  */
 #}
-<div class="layout-container u-boxes">
 
-	<header role="banner">
-		{{ page.header }}
-	</header>
 
-	{{ page.primary_menu }}
-	{{ page.secondary_menu }}
+<header>
+  <div class="l-Container">
+    <div class="l-Navgroup">
+      <div class="Logo">
+        <a href="/home" title="Startseite" rel="home">Koch-Wiki</a>
+      </div>
+      {{ page.navigation }}
+    </div>
+  </div>
+</header>
 
-	{{ page.breadcrumb }}
+<div class="Main">
+  <div class="l-Container">
+    {{ page.messages }}
 
-	{{ page.highlighted }}
+    <main>
+      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-	{{ page.help }}
+      <div class="Content">
+        {{ page.content }}
+      </div>{# /.Content #}
 
-	<main role="main">
-		<a id="main-content" tabindex="-1"></a>
-		{# link is in html.html.twig #}
-
-		<div class="layout-content">
-			{{ page.content }}
-		</div>
-		{# /.layout-content #}
-
-		{% if page.sidebar_first %}
-			<aside class="layout-sidebar-first" role="complementary">
-				{{ page.sidebar_first }}
-			</aside>
-		{% endif %}
-
-		{% if page.sidebar_second %}
-			<aside class="layout-sidebar-second" role="complementary">
-				{{ page.sidebar_second }}
-			</aside>
-		{% endif %}
-
-	</main>
-
-	{% if page.footer %}
-		<footer role="contentinfo">
-			{{ page.footer }}
-		</footer>
-	{% endif %}
-
+    </main>
+  </div>
 </div>
-{# /.layout-container #}
+
+{% if page.footer %}
+  <div class="Footer">
+    <div class="l-Container">
+      <footer>
+        {{ page.footer }}
+      </footer>
+    </div>{# /.l-Container #}
+  </div>
+{% endif %}
+

@@ -1,6 +1,6 @@
 uuid: 6942a8e8-6025-4675-adaf-ad76cc134700
 langcode: de
-status: true
+status: false
 dependencies:
   theme:
     - bljo6035_site

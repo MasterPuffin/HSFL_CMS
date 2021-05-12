@@ -1,6 +1,6 @@
 uuid: 2914aaca-c3fa-42d6-9900-fffa6a93158b
 langcode: de
-status: true
+status: false
 dependencies:
   theme:
     - bljo6035_site

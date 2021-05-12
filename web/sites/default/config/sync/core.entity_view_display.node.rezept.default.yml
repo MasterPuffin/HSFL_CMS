@@ -86,7 +86,7 @@ content:
     region: content
   field_personen:
     weight: 108
-    label: inline
+    label: hidden
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -119,7 +119,7 @@ content:
     region: content
   field_wartezeit:
     weight: 112
-    label: inline
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -134,7 +134,7 @@ content:
     region: content
   field_zubereitungszeit:
     weight: 114
-    label: inline
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
