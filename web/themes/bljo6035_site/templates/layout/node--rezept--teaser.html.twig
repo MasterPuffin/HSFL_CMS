@@ -1,3 +1,26 @@
-  <div{{ content_attributes }}>
-    {{ content }}
+{# <div{{ content_attributes }}> #}
+{# {{ content }} #}
+{# </div> #}
+
+<article role="article" class="Card">
+  <h3 class="Card-label">
+    <a href="{{ url }}" rel="bookmark">
+      {{ label }}
+    </a>
+  </h3>
+
+  <div class="Card-image">
+    <a href="{{ url }}">
+      {{ content.field_bild }}
+    </a>
   </div>
+
+  <div class="Card-content">
+
+    <p>{{ content.field_einleitung.0 }}</p>
+
+    <p class="Card-links">
+      <a href="{{ url }}" rel="tag" title="{{ labek }}" hreflang="de">Weiterlesen</a>
+    </p>
+  </div>
+</article>
