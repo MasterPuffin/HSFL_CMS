@@ -1,0 +1,103 @@
+<?php
+
+/*
+ * https://drupal.stackexchange.com/questions/191983/how-do-i-add-custom-theme-settings
+ */
+
+function bljo6035_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormStateInterface $form_state)
+{
+    $form['bljo6035_settings']['show_regions'] = array(
+        '#type' => 'checkbox',
+        '#title' => t('Show regions'),
+        '#default_value' => theme_get_setting('show_regions', 'bljo6035')
+    );
+    $form['bljo6035_settings']['show_boxes'] = array(
+        '#type' => 'checkbox',
+        '#title' => t('Show boxes'),
+        '#default_value' => theme_get_setting('show_boxes', 'bljo6035')
+    );
+}
+
+function bljo6035_preprocess_region(&$variables)
+{
+    $variables['show_regions'] = theme_get_setting('show_regions', 'bljo6035');
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function bljo6035_page_attachments_alter(array &$page)
+{
+    $show_boxes = theme_get_setting('show_boxes', 'bljo6035');
+    if ($show_boxes) {
+        $page['#attached']['library'][] = 'bljo6035/boxes';
+        $page['#cache']['tags'][] = 'config:bljo6035.show_boxes';
+    }
+}
+
+function bljo6035_theme_suggestions_alter(array &$suggestions, array $variables, $hook)
+{
+    if ($hook == 'views_view') {
+        $suggestions[] = $hook . '__' . $variables['view']->id();
+        $suggestions[] = $hook . '__' . $variables['view']->id() . '__' . $variables['view']->current_display;
+    }
+    if ($hook == 'views_view_unformatted') {
+        //var_dump($variables['view']->id());
+        //var_dump($variables['view']->current_display);
+        $suggestions[] = $hook . '__' . $variables['view']->id();
+        $suggestions[] = $hook . '__' . $variables['view']->id() . '__' . $variables['view']->current_display;
+    }
+}
+
+// Thanks @mortendk
+// https://github.com/mortendk/vanilla/blob/develop/vanilla.theme
+//@TODO: Doc.
+function bljo6035_theme_suggestions_field_alter(array &$suggestions, array $variables)
+{
+
+    // creates template suggestions
+    // field--[bundle]--field--[type]--[viewmode]
+    // examples:
+    // field--user--field--image--compact.html.twig
+    // field--user--field--image.html.twig
+    $element = $variables['element'];
+
+    $suggestions[] = 'field__' . $element['#field_type'] . '__' . $element['#view_mode'];
+    $suggestions[] = 'field__' . $element['#field_name'] . '__' . $element['#view_mode'];
+    $suggestions[] = 'field__' . $element['#bundle'] . '__field__' . $element['#field_type'];
+    $suggestions[] = 'field__' . $element['#bundle'] . '__field__' . $element['#field_type'] . '__' . $element['#view_mode'];
+
+    // Special for viewfield
+    if ($variables['element']['#bundle'] == 'views' && $variables['element']['#field_type'] == 'viewfield') {
+        $vname = $variables['element']['#object']->get($element['#field_name'])->vname;
+        $vname = str_replace('|', '_', $vname);
+        $suggestions[] = 'field__' . $element['#field_name'] . '__' . $vname;
+    }
+}
+
+function bljo6035_theme_suggestions_taxonomy_term_alter(array &$suggestions, array $variables)
+{
+
+    // creates template suggestions
+
+    $element = $variables['elements'];
+    $term = $element['#taxonomy_term'];
+    $vid = $term->getVocabularyId();
+
+    $suggestions[] = 'taxonomy_term__' . $element['#view_mode'];
+    $suggestions[] = 'taxonomy_term__' . $vid;
+    $suggestions[] = 'taxonomy_term__' . $vid . '__' . $element['#view_mode'];
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ * @see: https://www.drupal.org/forum/support/theme-development/2015-07-02/how-to-add-in-drupal-8-a-custom-suggestion-page-template
+ */
+function bljo6035_theme_suggestions_page_alter(array &$suggestions, array $variables)
+{
+
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+        $content_type = $node->bundle();
+        $suggestions[] = 'page__' . $content_type;
+    }
+}
