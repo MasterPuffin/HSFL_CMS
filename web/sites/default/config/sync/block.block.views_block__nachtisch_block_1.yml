@@ -1,0 +1,29 @@
+uuid: cdabd1b3-76e4-4571-bcb2-e721995200ee
+langcode: de
+status: true
+dependencies:
+  config:
+    - views.view.nachtisch
+  module:
+    - system
+    - views
+  theme:
+    - bljo6035_site
+id: views_block__nachtisch_block_1
+theme: bljo6035_site
+region: content
+weight: -3
+provider: null
+plugin: 'views_block:nachtisch-block_1'
+settings:
+  id: 'views_block:nachtisch-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

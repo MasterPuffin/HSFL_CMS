@@ -11,7 +11,7 @@ _core:
 id: bljo6035_site_breadcrumbs
 theme: bljo6035_site
 region: content
-weight: -6
+weight: -8
 provider: null
 plugin: system_breadcrumb_block
 settings:

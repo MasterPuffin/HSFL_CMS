@@ -228,6 +228,23 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
+  block_1:
+    display_plugin: block
+    id: block_1
+    display_title: Block
+    position: 2
+    display_options:
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
   page_1:
     display_plugin: page
     id: page_1
@@ -241,8 +258,8 @@ display:
         title: Vorspeisen
         menu_name: main
         description: ''
-        parent: 'views_view:views.rezepte.page_1'
-        weight: -50
+        parent: ''
+        weight: -47
         expanded: false
         enabled: true
     cache_metadata:

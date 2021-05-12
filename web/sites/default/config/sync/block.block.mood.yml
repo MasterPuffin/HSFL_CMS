@@ -1,0 +1,30 @@
+uuid: 00840d70-271f-42a1-9128-ead2175c8f22
+langcode: de
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:183a94d2-4e6b-4a83-b368-9e5a5c21c7ef'
+  module:
+    - block_content
+    - system
+  theme:
+    - bljo6035_site
+id: mood
+theme: bljo6035_site
+region: mood
+weight: 0
+provider: null
+plugin: 'block_content:183a94d2-4e6b-4a83-b368-9e5a5c21c7ef'
+settings:
+  id: 'block_content:183a94d2-4e6b-4a83-b368-9e5a5c21c7ef'
+  label: Mood
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

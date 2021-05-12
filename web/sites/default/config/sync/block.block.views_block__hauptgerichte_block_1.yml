@@ -1,0 +1,29 @@
+uuid: 3569bb97-2661-4697-956a-1a7e22070b3e
+langcode: de
+status: true
+dependencies:
+  config:
+    - views.view.hauptgerichte
+  module:
+    - system
+    - views
+  theme:
+    - bljo6035_site
+id: views_block__hauptgerichte_block_1
+theme: bljo6035_site
+region: content
+weight: -5
+provider: null
+plugin: 'views_block:hauptgerichte-block_1'
+settings:
+  id: 'views_block:hauptgerichte-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
