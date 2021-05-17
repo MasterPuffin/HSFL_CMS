@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \Drupal\bljo6035\Controller\HelloController.
+ * Contains \Drupal\bljo6035_new\Controller\HelloController.
  */
 
-namespace Drupal\bljo6035\Controller;
+namespace Drupal\bljo6035_new\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 

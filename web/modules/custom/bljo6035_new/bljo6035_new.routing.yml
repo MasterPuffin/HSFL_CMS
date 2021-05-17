@@ -1,15 +1,15 @@
-bljo6035.hello:
+bljo6035_new.hello:
   path: '/hello'
   defaults:
-    _controller: 'Drupal\bljo6035\Controller\HelloController::hello'
+    _controller: 'Drupal\bljo6035_new\Controller\HelloController::hello'
     _title: 'Hello world'
   requirements:
     _permission: 'access content'
 
-bljo6035.helloname:
+bljo6035_new.helloname:
   path: '/hello/{name}'
   defaults:
-    _controller: 'Drupal\bljo6035\Controller\HelloController::hello'
+    _controller: 'Drupal\bljo6035_new\Controller\HelloController::hello'
     _title: 'Hello world'
   requirements:
     _permission: 'access content'
