@@ -1,4 +1,4 @@
-bljo6035.content:
+bljo6035.hello:
   path: '/hello'
   defaults:
     _controller: 'Drupal\bljo6035\Controller\HelloController::hello'
@@ -6,7 +6,7 @@ bljo6035.content:
   requirements:
     _permission: 'access content'
 
-bljo6035.contentxo:
+bljo6035.helloname:
   path: '/hello/{name}'
   defaults:
     _controller: 'Drupal\bljo6035\Controller\HelloController::hello'
