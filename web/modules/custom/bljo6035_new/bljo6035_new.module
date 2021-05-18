@@ -1,5 +1,7 @@
 <?php
 
+module_load_include('inc', 'module_name', '/relative_path_to/library');
+
 /**
  * Implements hook_theme().
  */
@@ -13,4 +15,11 @@ function bljo6035_new_theme($existing, $type, $theme, $path) {
     ],
   ];
   return $variables;
+}
+
+function bljo6035_new_getLatestRecipes(): array {
+  $nids = \Drupal::entityQuery('node')->condition('status', 1)->condition('type', 'rezept')->execute();
+  $nids = array_slice($nids, 0, 3);
+
+  return \Drupal\node\Entity\Node::loadMultiple($nids);
 }
