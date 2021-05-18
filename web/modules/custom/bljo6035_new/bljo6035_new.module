@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function bljo6035_new_theme($existing, $type, $theme, $path) {
+  $variables = [
+    'new' => [
+      'variables' => [
+        'text' => NULL,
+      ],
+      'template' => 'new',
+    ],
+  ];
+  return $variables;
+}

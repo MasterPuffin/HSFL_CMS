@@ -1,0 +1,7 @@
+bljo6035_new.new:
+  path: '/neu'
+  defaults:
+    _controller: 'Drupal\bljo6035_new\Controller\NewController::new'
+    _title: 'Neue Rezepte'
+  requirements:
+    _permission: 'access content'
