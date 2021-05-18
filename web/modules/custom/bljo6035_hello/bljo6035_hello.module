@@ -5,9 +5,9 @@
  */
 function bljo6035_hello_theme($existing, $type, $theme, $path) {
   $variables = [
-    'bljo6035_hello' => [
+    'hello' => [
       'variables' => [
-        'source_text' => NULL,
+        'text' => NULL,
       ],
       'template' => 'hello',
     ],

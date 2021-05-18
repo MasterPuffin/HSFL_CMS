@@ -11,9 +11,10 @@ use Drupal\Core\Controller\ControllerBase;
 
 class HelloController extends ControllerBase {
   public function hello(string $name = ""): array {
+    var_dump($name);
     return array(
-      '#type' => 'markup',
-      '#markup' => t('Hello ' . (empty($name) ? 'World' : $name)),
+      '#theme' => 'hello',
+      '#text' => t('Hello ' . (empty($name) ? 'World' : $name)),
     );
   }
 }
