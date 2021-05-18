@@ -11,8 +11,9 @@
  * @ingroup themeable
  */
 #}
-  {%  for recipe in text %}
-    <article role="article">
+<div class="Cardlist">
+  {% for recipe in text %}
+    <article role="article" class="Card">
       <h3 class="Card-label">
         <a href="{{ path('entity.node.canonical', {'node': recipe.id}) }}" rel="bookmark">
           {{ recipe.title.value }}
@@ -21,9 +22,9 @@
       <div class="Card-content">
         <p>{{ recipe.field_einleitung.value }}</p>
         <p class="Card-links">
-          <a href="{{ path('entity.node.canonical', {'node': recipe.id}) }}" hreflang="de">Weiterlesen</a>
+          <a href="{{ path('entity.node.canonical', {'node': recipe.id}) }}">Weiterlesen</a>
         </p>
       </div>
     </article>
-    <hr>
   {% endfor %}
+</div>

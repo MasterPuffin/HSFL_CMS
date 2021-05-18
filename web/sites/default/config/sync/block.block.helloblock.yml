@@ -1,0 +1,25 @@
+uuid: faa68fcf-2bcb-4918-aed2-5ce4e9304078
+langcode: de
+status: true
+dependencies:
+  module:
+    - bljo6035_new
+    - system
+  theme:
+    - bljo6035_site
+id: helloblock
+theme: bljo6035_site
+region: content
+weight: -6
+provider: null
+plugin: hello_block
+settings:
+  id: hello_block
+  label: 'Neuste Rezepte'
+  provider: bljo6035_new
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

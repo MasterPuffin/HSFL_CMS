@@ -11,7 +11,7 @@ _core:
 id: bljo6035_site_content
 theme: bljo6035_site
 region: content
-weight: -6
+weight: -7
 provider: null
 plugin: system_main_block
 settings:
